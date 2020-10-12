@@ -29,10 +29,10 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import MenuItensList from './android/app/src/components/MenuItensList';
 import CreateTeam from './android/app/src/pages/CreateTeam';
-import Equipes from './android/app/src/pages/Equipes';
+import Teams from './android/app/src/pages/Teams';
 import Login from './android/app/src/pages/Login';
 import Menu from './android/app/src/pages/Menu';
-import EquipeInfo from './android/app/src/pages/EquipeInfo';
+import TeamInfo from './android/app/src/pages/TeamInfo';
 import EmployeeInfo from './android/app/src/pages/EmployeeInfo';
 
 declare const global: { HermesInternal: null | {} };
@@ -40,7 +40,7 @@ declare const global: { HermesInternal: null | {} };
 const App = () => {
   return (
     <>
-      <EmployeeInfo/>
+      <Teams/>
     </>
   );
 };

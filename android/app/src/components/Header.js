@@ -31,6 +31,5 @@ const style = StyleSheet.create({
         fontSize: 32,
         top: 75,
         left: 15,
-
     }
 })

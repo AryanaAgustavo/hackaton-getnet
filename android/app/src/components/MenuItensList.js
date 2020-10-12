@@ -65,7 +65,6 @@ const style = StyleSheet.create({
         marginTop: 30,
         marginLeft: 39,
         alignItems: "center",
-        padding: 10,
         borderRadius: 12
     },
     icons: {

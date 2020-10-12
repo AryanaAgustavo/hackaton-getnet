@@ -23,11 +23,11 @@ export default function CreateTeam() {
 
             <Text style={style.text3}> Vamos juntos revolucionar! </Text>
 
-            <TouchableHighlight>
-                <Text style={style.btnPositive}>Vamos lá !</Text>
+            <TouchableHighlight style={style.btnPositive}>
+                <Text style={style.btnText}>Vamos lá !</Text>
             </TouchableHighlight>
-            <TouchableHighlight>
-                <Text style={style.btnNegative}>Não dessa vez</Text>
+            <TouchableHighlight style={style.btnNegative}>
+                <Text  style={style.btnTextNot}>Não dessa vez</Text>
             </TouchableHighlight>
         </View>
     );
@@ -35,6 +35,8 @@ export default function CreateTeam() {
 
 const style = StyleSheet.create({
     container: {
+        flex: 1,
+        justifyContent: 'center',
         backgroundColor: '#B20202',
     },
     title: {
@@ -42,7 +44,7 @@ const style = StyleSheet.create({
         fontSize: 24,
         width: 284,
         height: 72,
-        top: 131,
+        top: 80,
         left: 40
     },
     subtitle: {
@@ -51,14 +53,14 @@ const style = StyleSheet.create({
         fontSize: 24,
         width: 284,
         height: 72,
-        top: 92,
+        top: 40,
         left: 40
     },
     text: {
         fontWeight: "400",
         fontSize: 18,
         left: 174,
-        top: 60,
+        top: 10,
         color: '#FFF',
         fontFamily: "Poppins"
     },
@@ -67,7 +69,7 @@ const style = StyleSheet.create({
         fontWeight: "400",
         fontSize: 18,
         left: 31,
-        top: 80,
+        top: 30,
         color: '#FFF',
         fontFamily: "Poppins"
     },
@@ -81,6 +83,7 @@ const style = StyleSheet.create({
         fontFamily: "Poppins"
     },
     btnNegative: {
+        alignSelf:'center',
         width: 335,
         height: 54,
         backgroundColor: '#B20202',
@@ -88,8 +91,10 @@ const style = StyleSheet.create({
         color: "#FFF",
         fontSize: 14,
         fontWeight: "700",
+        marginTop: 10,
     },
     btnPositive: {
+        alignSelf:'center',
         width: 335,
         height: 54,
         backgroundColor: '#FFF',
@@ -97,7 +102,15 @@ const style = StyleSheet.create({
         color: "#B20202",
         fontSize: 14,
         fontWeight: "700"
-
+    },
+    btnText: {
+        color: "#B20202", 
+        justifyContent: 'center',
+        alignSelf: 'center',
+    },
+    btnTextNot: {
+        color: "#FFF", 
+        justifyContent: 'center',
+        alignSelf: 'center',
     }
-
 })
