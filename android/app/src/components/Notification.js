@@ -5,10 +5,11 @@ export default function Notification(){
     return(
         <View>
             <TouchableWithoutFeedback>
-                <View>
-                    <Text style={style.notification}>
+                <View style={style.notification}>
+                    <Text style={style.text}>
                         Sua fatura vai vencer
                     </Text>
+                    <Text style={style.hour}>14:00</Text>
                 </View>
             </TouchableWithoutFeedback>
         </View>
@@ -18,12 +19,29 @@ export default function Notification(){
 const style = StyleSheet.create({
     notification: {
         marginTop: 5,
-        marginLeft: 15,
-        marginRight: 15,
-        justifyContent: 'center',
-        backgroundColor: "#DDDDDD",
-        padding: 10,
-        height: 50,
-        borderRadius: 10
+        marginLeft: 39,
+        backgroundColor: "#FFF",
+        height: 54,
+        width:335,
+        borderRadius: 12,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderWidth: 1,
+        borderColor: '#F1F1F1'
     },
+    text: {
+        fontFamily: 'Poppins',
+        marginLeft: 15,
+        fontSize: 12,
+        color: '#000000'
+    },
+    hour: {
+        fontFamily: 'Poppins',
+        color: "#8e0000",
+        marginRight: 0,
+        marginLeft: 150,
+        width: 30,
+        height: 18,
+
+    }
 });
