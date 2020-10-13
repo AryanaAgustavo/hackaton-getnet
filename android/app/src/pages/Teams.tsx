@@ -1,19 +1,23 @@
 import React from 'react';
-import { View, StyleSheet, Text, TouchableHighlight } from 'react-native';
+import { View, StyleSheet, Text, TouchableHighlight, TouchableOpacity } from 'react-native';
 import EmployeeCard from '../components/EmployeeCard';
 
-export default function EmployeeInfo() {
-    return (
+export default function Teams(){
+    return(
         <View style={style.container}>
             <Text style={style.title}>Equipes</Text>
-            <Text style={style.subtitle}>InformaçõesFuncionário</Text>
-            
+            <Text style={style.subtitle}>Nova Equipe?</Text>
+            <TouchableOpacity>
+                <Text style={style.btn}>Quero adicionar uma equipe!</Text>
+            </TouchableOpacity>
+            <Text style={style.subtitle}>Minhas Equipes</Text>
+            <EmployeeCard/>
         </View>
     );
 }
 
 const style = StyleSheet.create({
-    container: {
+    container:{
         justifyContent: 'center',
         alignContent: 'center'
     },
@@ -38,23 +42,12 @@ const style = StyleSheet.create({
         height: 54,
         backgroundColor: '#B20202',
         borderRadius: 12,
-        marginBottom: 20,
+        marginBottom: 50,
         color: "#FFF",
         top: 120,
         fontSize: 12,
         padding: 15,
         left: 39
-    },
-    btnDelete: {
-        width: 335,
-        height: 54,
-        backgroundColor: '#B20202',
-        borderRadius: 12,
-        color: "#FFF",
-        top: 360,
-        fontSize: 12,
-        padding: 15,
-        left: 39,
     },
 
 })

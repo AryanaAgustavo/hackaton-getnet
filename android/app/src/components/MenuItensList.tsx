@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, StyleSheet, Vibration, View, TouchableHighlight, TouchableOpacity, FlatList } from 'react-native';
-import Icon from 'react-native-vector-icons/Feather';
+import { Text, StyleSheet, Vibration, View, TouchableHighlight, TouchableOpacity, FlatList, Image } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 const dataItens = [
     {
@@ -17,14 +18,14 @@ const dataItens = [
     }
 ];
 
-const Items = ({title}) => (
+const Items = ({  }) => (
     <View style={style.containerItens}>
         <TouchableHighlight>
             <View style={style.iconsMenu}>
-                {/* <Icon name="home" style={style.icons} /> */}
+                <Icon name="facebook" size={24} color="#FFF"/>
             </View>
         </TouchableHighlight>
-        <Text> {title} </Text>
+        <Text> {} </Text>
     </View>
 )
 
@@ -32,6 +33,9 @@ const Items = ({title}) => (
 export default function MenuItensList() {
     return (
         <View style={style.container}>
+            <Image source={{ uri: 'https://img2.gratispng.com/20180702/way/kisspng-house-computer-icons-home-kunal-air-building-house-icons-5b3a96333a7629.5783277015305661952395.jpg' }}
+                
+            />            
             <FlatList style={style.list}
                 data={dataItens}
                 keyExtractor={item => item.title}
@@ -41,12 +45,12 @@ export default function MenuItensList() {
                     <View style={style.containerItens}>
                         <TouchableHighlight>
                             <View style={style.iconsMenu}>
-                                <Icon name={item.icon} style={style.icons} />
+                            <Icon name="facebook" size={24} color="#FFF"/>
                             </View>
                         </TouchableHighlight>
                         <Text style={style.titleMenu}> {item.title} </Text>
                     </View>
-            )} />
+                )} />
         </View>
     );
 }
